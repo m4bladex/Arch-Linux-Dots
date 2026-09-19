@@ -28,9 +28,10 @@ You will generally want:
 labwc
 waybar
 swaync
-yazi
 rofi
 sddm
+pywal
+hyprlock
 
 Plus the usual Wayland utilities and whatever optional applications your configuration references.
 
