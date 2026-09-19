@@ -15,11 +15,6 @@ Built on Arch Linux with the CachyOS kernel.
 This repository contains the configuration used for my LabWC setup, including:
 
 .config/
-├── labwc/
-├── waybar/
-├── swaync/
-├── yazi/
-└── rofi/
 
 sddm/
 └── theme/
