@@ -1,4 +1,4 @@
-minimal
+# minimal
 
 A clean, fast and aesthetic LabWC rice built around Arch Linux, with a custom Wayland workflow and a focus on keeping things lightweight.
 
