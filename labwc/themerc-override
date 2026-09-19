@@ -1,0 +1,24 @@
+# Borders
+border.width: 1
+
+window.active.border.color: #30343b
+window.inactive.border.color: #20242a
+
+# Titlebar background
+window.active.title.bg.color: #14181d
+window.inactive.title.bg.color: #0e1115
+
+# Titlebar text
+window.active.label.text.color: #e6e6e6
+window.inactive.label.text.color: #888888
+
+# Titlebar buttons
+window.active.button.unpressed.image.color: #e6e6e6
+window.inactive.button.unpressed.image.color: #888888
+
+# Center the title
+window.label.text.justify: center
+
+# Button hover effect
+window.button.hover.bg.color: #ffffff15
+window.button.hover.bg.corner-radius: 6

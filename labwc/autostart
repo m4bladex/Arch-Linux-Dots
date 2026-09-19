@@ -1,0 +1,12 @@
+# 1. Force DBus to activate and recognize LabWC's Wayland session FIRST
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=labwc
+
+# 2. Give D-Bus a split second, then launch Waybar
+sleep 1.5 && waybar &
+
+# 3. Launch notifications and background daemons
+swaync &
+awww-daemon &
+
+# 4. Give Waybar time to fully build the tray before running legacy X11 tray support
+sleep 3 && snixembed &

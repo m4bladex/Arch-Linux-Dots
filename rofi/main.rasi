@@ -1,0 +1,95 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: " Apps ";
+    drun-display-format: "{name}";
+}
+
+/* Import Pywal colors */
+@import "~/.cache/wal/colors-rofi-dark"
+
+* {
+    /* Map Pywal colors to your layout */
+    bg: rgba(10, 14, 20, 0.78); 
+    bg2: rgba(10, 14, 20, 0.78);
+    fg: @foreground; 
+    muted: @color8; 
+    accent: @color11; 
+    border: @color4; 
+    font: "JetBrainsMono Nerd Font 11";
+    
+    /* Global transparency fixes */
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 680px;
+    border: 2px;
+    border-color: @border;
+    border-radius: 18px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 18px;
+    children: [ inputbar, listview ];
+    spacing: 14px;
+}
+
+inputbar {
+    padding: 12px 15px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 12px;
+    background-color: @bg2;
+    children: [ entry ]; 
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    text-color: #FFFFFF;
+    placeholder: "Use me ;)";
+    placeholder-color: @muted;
+}
+
+listview {
+    lines: 7;
+    columns: 1;
+    spacing: 6px;
+    fixed-height: true;
+    cycle: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 9px 12px;
+    border-radius: 10px;
+    orientation: horizontal;
+    vertical-align: 0.5;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: #000000;
+    text-color: #FFFFFF; 
+}
+
+element-icon {
+    size: 22px;
+    margin: 0 12px 0 0;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    expand: true;
+}

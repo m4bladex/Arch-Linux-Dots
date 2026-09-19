@@ -1,0 +1,61 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+* {
+    bg: rgba(10, 14, 20, 0.95);
+    fg: @foreground;
+    border: @color4;
+
+    font: "JetBrainsMono Nerd Font 10";
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 1000px;
+    border: 2px;
+    border-color: @border;
+    border-radius: 18px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 20px;
+    children: [ listview ];
+}
+
+listview {
+    columns: 4;
+    lines: 2;
+
+    spacing: 15px;
+    fixed-height: false;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+
+    padding: 5px;
+
+    border-radius: 12px;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: rgba(255,255,255,0.15);
+}
+
+element-icon {
+    size: 220px;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text {
+    enabled: false;
+}

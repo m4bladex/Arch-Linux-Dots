@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <!-- Core Settings -->
+  <core>
+    <decoration>server</decoration>
+    <maximizedDecoration>titlebar</maximizedDecoration>
+    <gap>0</gap>
+    <adaptiveSync>no</adaptiveSync>
+    <allowTearing>no</allowTearing>
+    <autoEnableOutputs>yes</autoEnableOutputs>
+    <reuseOutputMode>no</reuseOutputMode>
+    <xwaylandPersistence>no</xwaylandPersistence>
+    <primarySelection>yes</primarySelection>
+  </core>
+
+  <placement>
+    <policy>cascade</policy>
+  </placement>
+
+  <dropShadows>yes</dropShadows>
+  <dropShadowsOnTiled>yes</dropShadowsOnTiled>
+
+  <!-- Theme Settings -->
+  <theme>
+    <name>labwc-dark</name>
+    <font name="Roboto" size="10" />
+    <cornerRadius>12</cornerRadius>
+    <keepBorder>yes</keepBorder>
+    <dropShadows>yes</dropShadows>
+    <dropShadowsOnTiled>no</dropShadowsOnTiled>
+  </theme>
+
+  <!-- Focus Behavior -->
+  <focus>
+    <followMouse>yes</followMouse>
+    <followMouseRequiresMovement>yes</followMouseRequiresMovement>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <!-- Workspace Setup -->
+  <desktops number="4">
+    <popupTime>1000</popupTime>
+    <names>
+      <name>WS 1</name>
+      <name>WS 2</name>
+      <name>WS 3</name>
+      <name>WS 4</name>
+    </names>
+  </desktops>
+
+  <!-- Keybinds -->
+  <keyboard>
+    <default />
+
+    <!-- Application Launchers -->
+    <keybind key="W-t">
+      <action name="Execute" command="alacritty" />
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="alacritty -e yazi" />
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute" command="alacritty -e btop" />
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute" command="alacritty -e pulsemixer" />
+    </keybind>
+    <keybind key="W-n">
+      <action name="Execute" command="~/.config/rofi/wal-menu.sh" />
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute" command="hyprlock" />
+    </keybind>
+    <keybind key="W-a">
+      <action name="Execute" command="swaync-client -t" />
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute" command=" rofi -show drun run -theme ~/.config/rofi/main.rasi" />
+    </keybind>
+    <keybind key="W-x">
+      <action name="Execute" command="~/.config/rofi/RofiPower.sh" />
+    </keybind>
+
+    <!-- System Actions -->
+    <keybind key="W-C-r">
+      <action name="Reconfigure" />
+    </keybind>
+    <keybind key="f11">
+      <action name="ToggleFullscreen" />
+    </keybind>
+
+    <!-- Window Navigation -->
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+    <keybind key="A-F4">
+      <action name="Close" />
+    </keybind>
+
+    <!-- Workspace Switching -->
+    <keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3" /></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4" /></keybind>
+    <keybind key="C-S-Left">
+      <action name="GoToDesktop" to="left" />
+    </keybind>
+    <keybind key="C-S-Right">
+      <action name="GoToDesktop" to="right" />
+    </keybind>
+
+
+    <!-- Screenshots -->
+    <keybind key="Print">
+      <action name="Execute" command="sh -c 'mkdir -p ~/Pictures/Screenshots; grim - | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png | wl-copy'" />
+    </keybind>
+
+    <!-- Hardware Controls (Volume & Brightness) -->
+    <keybind key="F6">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+    <keybind key="F7">
+      <action name="Execute" command="brightnessctl set +5%" />
+    </keybind>
+    <keybind key="F8">
+      <action name="Execute" command="bash -c 'if [ &quot;$(nmcli radio wifi)&quot; = &quot;enabled&quot; ]; then nmcli radio wifi off; else nmcli radio wifi on; fi'" />
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute" command="brightnessctl set +5%" />
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+  </keyboard>
+
+  <!-- Mouse Controls -->
+  <mouse>
+    <default />
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+        <action name="Execute" command="pkill -x rofi" />
+      </mousebind>
+      <mousebind button="Left" action="Press">
+        <action name="Execute" command="pkill -x rofi" />
+        <action name="Unfocus" />
+      </mousebind>
+    </context>
+    <context name="Border">
+      <mousebind button="Left" action="Press">
+        <action name="Execute" command="pkill -x rofi" />
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+    </context>
+    <context name="Client">
+      <mousebind button="Left" action="Press">
+        <action name="Execute" command="pkill -x rofi" />
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+    </context>
+    <context name="Titlebar">
+      <mousebind button="Left" action="Press">
+        <action name="Execute" command="pkill -x rofi" />
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+    </context>
+  </mouse>
+
+  <!-- Trackpad & Mouse Input Rules -->
+  <libinput>
+    <device category="touchpad">
+      <pointerSpeed>0.3</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <naturalScroll>no</naturalScroll>
+      <scrollFactor>0.3</scrollFactor>
+      <scrollMethod>twoFinger</scrollMethod>
+      <tap>yes</tap>
+      <tapButtonMap>lrm</tapButtonMap>
+      <tapAndDrag>yes</tapAndDrag>
+      <dragLock>no</dragLock>
+      <disableWhileTyping>yes</disableWhileTyping>
+      <clickMethod>buttonAreas</clickMethod>
+    </device>
+    <device category="non-touch">
+      <pointerSpeed>1.0</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <naturalScroll>no</naturalScroll>
+      <scrollFactor>1.0</scrollFactor>
+      <leftHanded>no</leftHanded>
+    </device>
+  </libinput>
+
+  <!-- Magnifier Options -->
+  <magnifier>
+    <width>400</width>
+    <height>400</height>
+    <initScale>2</initScale>
+    <increment>0.2</increment>
+    <useFilter>true</useFilter>
+  </magnifier>
+
+  <!-- Window Rules -->
+  <windowRules>
+    <windowRule title="Attention">
+      <action name="ToggleAlwaysOnTop" />
+    </windowRule>
+    <windowRule identifier="mpv">
+      <action name="SetDecorations" decorations="border" />
+    </windowRule>
+  </windowRules>
+</labwc_config>

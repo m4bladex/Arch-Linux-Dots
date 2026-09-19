@@ -1,0 +1,125 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 11px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #d9dee7;
+}
+
+/* =========================
+   PACMAN WORKSPACES
+   ========================= */
+
+#workspaces {
+    margin: 2px 5px 2px 9px;
+    padding: 2px 4px;
+
+    background: rgba(8, 11, 15, 0.96);
+    border: 1px solid rgba(130, 140, 155, 0.42);
+    border-radius: 999px;
+}
+
+#workspaces button {
+    min-width: 27px;
+    margin: 0 2px;
+    padding: 2px 6px;
+
+    color: #596270;
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+}
+
+#workspaces button.active {
+    color: #111318;
+    background: #f5c84c;
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: #20262f;
+}
+
+/* =========================
+   CURRENT APPS
+   ========================= */
+
+#taskbar {
+    margin: 2px 4px;
+    padding: 2px 4px;
+
+    background: rgba(8, 11, 15, 0.96);
+    border: 1px solid rgba(130, 140, 155, 0.42);
+    border-radius: 999px;
+}
+
+#taskbar button {
+    margin: 0 1px;
+    padding: 3px 6px;
+
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+}
+
+#taskbar button.active {
+    background: #202832;
+}
+
+#taskbar button:hover {
+    background: #2a333e;
+}
+
+/* =========================
+   SYSTEM TRAY
+   ========================= */
+
+#tray {
+    margin: 2px 4px;
+    padding: 2px 7px;
+
+    background: rgba(8, 11, 15, 0.96);
+    border: 1px solid rgba(130, 140, 155, 0.42);
+    border-radius: 999px;
+}
+
+/* =========================
+   ONE SYSTEM INFO PILL
+   ========================= */
+
+#custom-sysinfo {
+    margin: 2px 8px 2px 3px;
+    padding: 2px 9px;
+
+    background: rgba(8, 11, 15, 0.97);
+    color: #e0e6ee;
+
+    border: 1px solid rgba(130, 140, 155, 0.50);
+    border-radius: 999px;
+}
+
+/* =========================
+   TOOLTIP
+   ========================= */
+
+tooltip {
+    background: #0b0e12;
+    color: #e5e9ef;
+    border: 1px solid #3b4654;
+    border-radius: 9px;
+    padding: 5px 8px;
+}
+
+#custom-sysinfo {
+    margin: 2px 8px 2px 3px;
+    padding: 2px 9px;
+
+    background: rgba(8, 11, 15, 0.97);
+    color: #e0e6ee;
+
+    border: 1px solid rgba(130, 140, 155, 0.50);
+    border-radius: 999px;
+}

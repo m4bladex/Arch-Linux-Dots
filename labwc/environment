@@ -1,0 +1,22 @@
+# --- Input & Region ---
+XKB_DEFAULT_LAYOUT=us
+LANG=en_US.UTF-8
+
+# --- Cursor ---
+XCURSOR_THEME=Bibata-Modern-Ice
+XCURSOR_SIZE=24
+
+# --- Qt ---
+QT_QPA_PLATFORM=wayland
+QT_QPA_PLATFORMTHEME=qt6ct
+
+# --- GTK ---
+#GDK_BACKEND=wayland,x11
+
+# --- Desktop Identity (CRITICAL FOR TRAY & SCREEN SHARING) ---
+XDG_CURRENT_DESKTOP=labwc
+XDG_SESSION_TYPE=wayland
+XDG_SESSION_DESKTOP=labwc
+
+# --- Force Electron & Chromium to Use Wayland Natively ---
+ELECTRON_OZONE_PLATFORM_HINT=wayland

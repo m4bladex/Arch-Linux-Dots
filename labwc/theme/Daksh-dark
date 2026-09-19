@@ -1,0 +1,22 @@
+border.width: 2
+
+window.active.border.color: #69798d
+window.inactive.border.color: #303945
+
+window.active.title.bg: solid
+window.active.title.bg.color: #111820
+
+window.inactive.title.bg: solid
+window.inactive.title.bg.color: #0b1016
+
+window.active.title.text.color: #edf3f9
+window.inactive.title.text.color: #7f8b99
+
+window.titlebar.padding.width: 9
+window.titlebar.padding.height: 5
+
+window.active.shadow.size: 18
+window.active.shadow.color: #00000090
+
+window.inactive.shadow.size: 10
+window.inactive.shadow.color: #00000055

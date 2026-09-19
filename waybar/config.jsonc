@@ -1,0 +1,44 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  
+  "modules-left": [
+    "ext/workspaces"
+  ],
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/sysinfo"
+  ],
+
+  "ext/workspaces": {
+    "format": "ඞ",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 15,
+    "all-outputs": false,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+
+  "custom/sysinfo": {
+    "exec": "/home/daksh/.config/waybar/scripts/sysinfo.sh",
+    "format": "{}",
+    "interval": 2,
+    "tooltip": false
+  }
+}
